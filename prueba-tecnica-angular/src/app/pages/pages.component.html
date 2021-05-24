@@ -1,0 +1,88 @@
+<div class="main-content">
+  <div class="row justify-content-center first-content">
+    <img class="logo-covinoc" src="../../assets/logo.png">
+  </div>
+  <div class="row new-task-content justify-content-center pt-4 pb-4">
+    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-9 col-xs-12">
+      <div class="row mb-4 mt-4 title-font" style="color: #FFFFFFDE;">
+        <i class="fas fa-plus"></i>&nbsp;&nbsp;Nueva tarea
+      </div>
+      <div class="row">
+        <div class="col-6 pl-0">
+          <input [(ngModel)]="nueva_tarea.title" class="form-control d-inline-block" id="input-new-task"
+            name="new-task" type="text" placeholder="Ingresar titulo">
+        </div>
+        <div class="col-3 text-center">
+          <label class="form-check-label font_family_roboto">
+            Tarea completada
+          </label>&nbsp;&nbsp;
+          <input [ngModelOptions]="{standalone: true}" [(ngModel)]="nueva_tarea.state" type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </div>
+        <div class="col-3 text-center">
+          <button [disabled]="!nueva_tarea.title" id="btn-create-task" (click)="fnCrearTarea(nueva_tarea)">
+            <i class="fas fa-plus"></i>&nbsp;&nbsp;Guardar tarea
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center" style="height: 90px;">
+    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-9 col-xs-12">
+      <div class="row justify-content-between pt-4 pb-4">
+        <div class="col-3 task-list-title title-font pl-0">
+          <i class="fas fa-tasks"></i>&nbsp;Lista de tareas
+        </div>
+        <div class="col-4">
+          <input (input)="fnFilter(tareas_collection, input_search);" [(ngModel)]="input_search" class="form-control d-inline-block" id="search-input"
+            name="search-task" type="text" placeholder="Buscar">
+            <i class="fas fa-search icon_input_search"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="task-list-content col-xl-7 col-lg-7 col-md-7 col-sm-9 col-xs-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center border-0">
+              Id
+            </th>
+            <th scope="col" class="text-center border-0">
+              Mis tareas
+            </th>
+            <th scope="col" class="text-center border-0 w-10">
+              Completada
+            </th>
+            <th scope="col" class="text-center border-0 w-10">
+              Borrar
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarea_data of tareas_collection | paginate: { itemsPerPage: num_items_page, currentPage: current_page }; let i = index;">
+            <td class="text-center p-3">{{ tarea_data.id }}</td>
+            <td class="text-center p-3">{{ tarea_data.title }}</td>
+            <td class="text-center p-3">
+              <input [ngModelOptions]="{standalone: true}" [(ngModel)]="tarea_data.state" type="checkbox" (change)="fnActualizarTarea(tarea_data)" checked="checked">
+              <span class="checkmark"></span>
+            </td>
+            <td class="text-center p-3">
+              <i class="far fa-trash-alt" (click)="fnEliiminarTarea(tarea_data)" style="color: #EF0C0C;"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-12 mt-3">
+      <div class="row justify-content-center">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+          <div class="text-center kstdy-font_paginator">
+            <pagination-controls (pageChange)="current_page = $event" previousLabel="" nextLabel="" ></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

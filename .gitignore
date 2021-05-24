@@ -1,0 +1,10 @@
+.DS_Store
+e2e/
+package-lock.json
+node_modules/.staging
+node_modules/.bin
+node_modules/
+**node_modules/@nebular
+dist.zip
+dist/
+publicaciones/

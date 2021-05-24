@@ -1,0 +1,179 @@
+.font_family_roboto {
+    font-family: 'roboto';
+}
+
+.main-content {
+    top: 0px;
+    left: 0px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.first-content {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 90px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+}
+
+.new-task-content {
+    height: 198px;
+    background: #01CEB6 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+}
+
+.task-list-content {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 7px;
+    opacity: 1;
+}
+
+.form-check-label {
+    text-align: left;
+    font: normal 16px/24px Roboto;
+    letter-spacing: 0.5px;
+    color: #FFFFFFDE;
+    opacity: 1;
+}
+
+.title-font {
+    font: normal normal bold 20px/24px Roboto;
+    letter-spacing: 0.62px;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+th {
+    letter-spacing: 0.62px;
+    color: #11766A;
+    font-size: 20px;
+}
+
+tr {
+    height: 60px;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;   
+}
+
+input[type="checkbox"]:checked {
+    background: #11806A
+}
+
+.logo-covinoc {
+    width: 219px;
+    height: 50px;
+    margin-top: 18px;
+}
+
+#input-new-task {
+    background: #01CEB6;
+    border-bottom: 1px solid #fff !important;
+    color: #fff;
+    border: none;
+}
+
+#input-new-task:focus {
+    box-shadow: none;
+}
+
+#input-new-task::placeholder {
+    letter-spacing: 0.6px;
+    color: #FFFFFF99;
+}
+
+#btn-create-task {
+    letter-spacing: 0.2px;
+    color: #000000DE;
+    text-transform: uppercase;
+    background: #FFFFFF;
+    padding: 0 !important;
+    width: 168px;
+    height: 42px;
+    border: none;
+    border-radius: 17px;
+    font-size: 13px;
+    font-weight: bolder;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+#search-input {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #0EC4C4;
+    border-radius: 23px;
+}
+
+.icon_input_search {
+    position: absolute;
+    margin-top: 0.8rem;
+    margin-left: -2rem;
+    color: #27DAC5;
+}
+
+.task-list-title {
+    color: #4B9F8E;
+}
+
+::ng-deep .ngx-pagination .current {
+    top: 966px;
+    left: 900px;
+    width: 30px;
+    height: 41px;
+    background: #FFC183 0% 0% no-repeat padding-box !important;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 9px;
+}
+
+::ng-deep .ngx-pagination li span {
+    font-size: 20px
+}
+
+::ng-deep .ngx-pagination .pagination-next a::after {
+    content: '\f054' !important;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #3DB0E3;
+}
+
+::ng-deep .ngx-pagination .pagination-next.disabled::after {
+    content: '\f054' !important;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #D0D0D0;
+}
+
+::ng-deep .ngx-pagination .pagination-previous a::before {
+    content: '\f053' !important;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #3DB0E3;
+}
+
+::ng-deep .ngx-pagination .pagination-previous.disabled::before {
+    content: '\f053' !important;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #D0D0D0;
+}
+
+::ng-deep .ngx-pagination .pagination-previous,.pagination-next a::after{
+    content: '';
+}
+
+::ng-deep .ngx-pagination a:hover, .ngx-pagination button:hover {
+    background: transparent;
+}
+
+::ng-deep .ngx-pagination li:focus, ::ng-deep .ngx-pagination a:focus{
+    border-color: white !important;
+}
