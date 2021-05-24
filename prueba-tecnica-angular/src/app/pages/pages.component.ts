@@ -100,4 +100,8 @@ export class PagesComponent implements OnInit {
     }
   }
 
+  fnGoGithub() {
+    window.open('https://github.com/oskrecheverria1996/prueba-tecnica');
+  }
+
 }

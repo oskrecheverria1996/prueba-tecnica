@@ -177,3 +177,22 @@ input[type="checkbox"]:checked {
 ::ng-deep .ngx-pagination li:focus, ::ng-deep .ngx-pagination a:focus{
     border-color: white !important;
 }
+  
+#content_btn_github {
+    position: fixed;
+    bottom: -4px;
+    right: 10px;
+    cursor: pointer;
+}
+
+// .btn_github {
+//     background-color: nb-theme(pgp-color-2);
+//     color: nb-theme(pgp-color-white);
+//     padding: 10px;
+//     border-radius: 35px;
+//     width: 50px;
+//     height: 50px;
+//     margin: 1rem;
+//     font-size: 20px;
+//     cursor: pointer;
+//   }
